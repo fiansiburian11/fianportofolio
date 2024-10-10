@@ -1,0 +1,326 @@
+* {
+  font-family: "Quicksand";
+  font-size: 18px;
+}
+
+.navbar-container {
+  background-color: #2d3e50;
+  overflow: hidden;
+  top: 0;
+  width: 100%;
+  z-index: 100;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.navbar a:hover {
+  color: rgb(171, 167, 167);
+  font-weight: bold;
+}
+
+.navbar .brand {
+  font-size: 25px;
+  font-weight: bold;
+  padding: 14px 16px;
+}
+
+.nav-right {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.nav-right li {
+  padding: 2px 3px;
+}
+
+.jumbotron {
+  text-align: center;
+  padding: 100px;
+  background-color: beige;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+}
+
+h1,
+h2,
+p {
+  margin-bottom: 0;
+  margin-top: 0;
+}
+
+h1 {
+  font-size: 40px;
+}
+
+.skills,
+.aboutme {
+  padding-top: 30px;
+  text-align: center;
+  font-size: 25px;
+  background-color: beige;
+}
+
+.skills h2,
+.aboutme h2 {
+  text-decoration: underline;
+}
+
+.bio {
+  background-color: #abccd3;
+  padding: 40px 40px;
+}
+
+.biodata {
+  width: 800px;
+  margin: 0 auto;
+  font-family: sans-serif;
+}
+
+.profile {
+  display: flex;
+  align-items: center;
+}
+
+.profile-image {
+  margin-right: 50px;
+}
+
+.profile-image img {
+  width: 300px;
+  height: 300px;
+  border-radius: 70%;
+  object-fit: inherit;
+}
+
+.table {
+  text-align: left;
+  color: #2d3e50;
+  table-layout: fixed;
+  width: 100%;
+}
+
+th {
+  width: 200px;
+}
+
+td {
+  width: auto;
+}
+
+main aside {
+  position: fixed;
+  inset-block: 0;
+  inset-inline-end: 0;
+}
+
+main aside .social-media {
+  height: 100%;
+  display: flex;
+}
+
+main aside .social-media ul {
+  padding: 10px 8px;
+  border-top-left-radius: 12px;
+  border-bottom-left-radius: 12px;
+  margin: auto;
+  background-color: #2d3e50;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  justify-content: center;
+  gap: 1px;
+}
+
+main aside .social-media li {
+  list-style-type: none;
+}
+
+main aside .social-media li a {
+  text-decoration: none;
+  font-size: 1.5rem;
+  color: white;
+  transition: all 0.1s ease-in-out;
+}
+
+main aside .social-media li a:hover {
+  color: #89b0d9;
+}
+
+.container {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+}
+
+.skill-box {
+  width: 40%;
+  border: 1px solid #2d3e50;
+  padding: 20px;
+  box-shadow: 7px 7px 10px #888888;
+}
+
+.skill-box .header {
+  color: white;
+  padding: 10px;
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.skill-box:nth-child(1) .header {
+  background-color: #f0ad4e;
+}
+
+.skill-box:nth-child(2) .header {
+  background-color: #d9534f;
+}
+
+.isi h2 {
+  margin-bottom: 10px;
+}
+
+.isi ul {
+  list-style-type: disc;
+  padding-left: 20px;
+}
+
+.about {
+  padding: 50px 100px 50px 100px;
+  color: #2d3e50;
+  background-color: #abccd3;
+}
+
+footer {
+  padding-block: 10px;
+  background-color: #2d3e50;
+}
+
+.footer {
+  text-align: center;
+  color: white;
+  font-size: 12px;
+}
+
+.foto {
+  width: 80%;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: beige;
+}
+
+.foto .gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.foto .photo-box {
+  border: 1px solid #ddd;
+  padding: 10px;
+  box-shadow: 7px 7px 10px #888888;
+}
+
+.foto .photo-box img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Medium devices (768px dan di bawahnya) */
+@media screen and (max-width: 768px) {
+  .navbar {
+    /* Gunakan .navbar, bukan header.navbar-container */
+    flex-direction: column;
+    align-items: flex-start; /* Rata kiri */
+  }
+  .nav-right {
+    /* Gunakan .nav-right, bukan header.navbar-container .nav-list ul */
+    flex-direction: column;
+    align-items: flex-start; /* Rata kiri */
+    margin-top: 10px; /* Tambahkan margin top */
+  }
+  .nav-right li {
+    padding: 5px 0; /* Sesuaikan padding */
+  }
+  main {
+    padding: 1rem; /* Kurangi padding */
+  }
+  .isiutama {
+    /* Gunakan .isiutama, bukan main .content */
+    flex-direction: column;
+    gap: 2rem;
+  }
+  .bio .table {
+    /* Gunakan .bio .table, bukan main .content .content-description .title */
+    font-size: 1rem; /* Sesuaikan ukuran font tabel */
+  }
+  .aboutme .foto {
+    /* Gunakan .aboutme .foto, bukan main .content .content-image */
+    order: -1;
+  }
+  .container {
+    /* Container untuk skill box */
+    flex-direction: column; /* Skill box jadi vertikal */
+  }
+  .skill-box {
+    width: 100%; /* Skill box memenuhi lebar container */
+  }
+  .profile {
+    flex-direction: column; /* Susun foto dan tabel secara vertikal */
+    align-items: flex-start; /* Rata kiri */
+  }
+
+  .profile-image {
+    margin-right: 0;
+    margin-bottom: 20px;
+    width: 100%; /* Foto memenuhi lebar layar */
+  }
+
+  .profile-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 0; /* Hilangkan border radius */
+  }
+
+  .table {
+    font-size: 14px; /* Perkecil ukuran font tabel */
+    width: 100%; /* Lebar tabel menyesuaikan layar */
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  /* Untuk tablet landscape */
+  /* CSS untuk tablet landscape di sini */
+}
+
+@media screen and (max-width: 480px) {
+  /* Untuk smartphone kecil */
+  /* CSS untuk smartphone kecil di sini */
+  h1 {
+    font-size: 30px;
+  }
+
+  .profile-image img {
+    width: 200px;
+    height: 200px;
+  }
+}
